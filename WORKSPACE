@@ -5,9 +5,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_features",
-    sha256 = "5ab1a90d09fd74555e0df22809ad589627ddff263cff82535815aa80ca3e3562",
-    strip_prefix = "bazel_features-1.39.0",
-    url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.39.0/bazel_features-v1.39.0.tar.gz",
+    sha256 = "966c211ec42c4deb2af4c6dd6948408100b752f61753c97055bdac9bfb5cc0c7",
+    strip_prefix = "bazel_features-1.41.0",
+    url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.41.0/bazel_features-v1.41.0.tar.gz",
 )
 
 load("@bazel_features//:deps.bzl", "bazel_features_deps")
@@ -16,9 +16,9 @@ bazel_features_deps()
 
 http_archive(
     name = "rules_python",
-    sha256 = "6810ff4b137b62e86ce3cedfebeeb2c988d8c5a16c4fc8081da21ad8f998a141",
-    strip_prefix = "rules_python-1.8.2",
-    url = "https://github.com/bazelbuild/rules_python/releases/download/1.8.2/rules_python-1.8.2.tar.gz",
+    sha256 = "94a2b4c5d9c45323a9737f8de8f841923bb628cace1e8e51fec5525ed9ccfb2d",
+    strip_prefix = "rules_python-1.8.3",
+    url = "https://github.com/bazelbuild/rules_python/releases/download/1.8.3/rules_python-1.8.3.tar.gz",
 )
 
 load("@rules_python//python:repositories.bzl", "py_repositories")
@@ -35,17 +35,17 @@ http_archive(
 # Define before rules_proto, otherwise we receive the version of com_google_protobuf from there
 http_archive(
     name = "com_google_protobuf",
-    sha256 = "136a07aad488cc502b11c4416fe4a7df2dfdea1d0833a7a8211000bf952728ba",
-    strip_prefix = "protobuf-33.4",
-    urls = ["https://github.com/protocolbuffers/protobuf/archive/v33.4.tar.gz"],
+    sha256 = "440848dffa209beb8a04e41cc352762e44f8e91342b2a43aab6af9b30713c2f6",
+    strip_prefix = "protobuf-33.5",
+    urls = ["https://github.com/protocolbuffers/protobuf/archive/v33.5.tar.gz"],
 )
 
 http_archive(
     name = "googleapis",
-    sha256 = "4b191eb402fa1c371146c51f19bc2b3580dfbfc5da79c7303b30ca3eed936f77",
-    strip_prefix = "googleapis-2ac88973cbafba24e4fb6f31038e0c76174ae704",
+    sha256 = "aecc0465d7b6d17dc86efd1817a13cbed2b51ab8fe441bee10de30367367deac",
+    strip_prefix = "googleapis-85b3f459f91cd08669c27da47d07bb57f6d9aa4d",
     urls = [
-        "https://github.com/googleapis/googleapis/archive/2ac88973cbafba24e4fb6f31038e0c76174ae704.zip",
+        "https://github.com/googleapis/googleapis/archive/85b3f459f91cd08669c27da47d07bb57f6d9aa4d.zip",
     ],
 )
 
@@ -141,9 +141,9 @@ rules_shell_toolchains()
 
 http_archive(
     name = "com_github_bazelbuild_buildtools",
-    sha256 = "53119397bbce1cd7e4c590e117dcda343c2086199de62932106c80733526c261",
-    strip_prefix = "buildtools-8.2.1",
-    urls = ["https://github.com/bazelbuild/buildtools/archive/v8.2.1.tar.gz"],
+    sha256 = "f3b800e9f6ca60bdef3709440f393348f7c18a29f30814288a7326285c80aab9",
+    strip_prefix = "buildtools-8.5.1",
+    urls = ["https://github.com/bazelbuild/buildtools/archive/v8.5.1.tar.gz"],
 )
 
 load("@com_github_bazelbuild_buildtools//buildifier:deps.bzl", "buildifier_dependencies")
